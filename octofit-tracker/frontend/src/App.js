@@ -1,10 +1,18 @@
 
 
 
+import React, { useState, useEffect } from 'react';
+import './App.css';
 import logo from './logo.svg';
 
 
 function App() {
+  const [theme, setTheme] = useState('white');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
@@ -34,6 +42,23 @@ function App() {
                 <NavLink className="nav-link" to="/workouts">Workouts</NavLink>
               </li>
             </ul>
+            <div className="d-flex align-items-center gap-2">
+              <span className="text-white fw-semibold">Theme:</span>
+              <button
+                className={`btn btn-sm theme-btn${theme === 'white' ? ' active' : ''}`}
+                onClick={() => setTheme('white')}
+                aria-pressed={theme === 'white'}
+              >
+                ☀️ White
+              </button>
+              <button
+                className={`btn btn-sm theme-btn${theme === 'dark' ? ' active' : ''}`}
+                onClick={() => setTheme('dark')}
+                aria-pressed={theme === 'dark'}
+              >
+                🌙 Dark
+              </button>
+            </div>
           </div>
         </div>
       </nav>

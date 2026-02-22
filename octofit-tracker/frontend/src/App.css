@@ -5,6 +5,96 @@ body {
   color: #22223b;
 }
 
+/* Theme styles */
+html[data-theme="white"] body {
+  background-color: #ffffff;
+  background-image: none;
+  color: #22223b;
+}
+
+html[data-theme="white"] .container,
+html[data-theme="white"] .card {
+  background-color: #ffffff;
+  color: #22223b;
+}
+
+html[data-theme="white"] .table {
+  background: #fff;
+  color: #22223b;
+}
+
+html[data-theme="dark"] body {
+  background-color: #000000;
+  background-image: none;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .container {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .card {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+html[data-theme="dark"] .table {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .modal-content {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .modal-footer {
+  background-color: #1a1a1a;
+}
+
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: #6db3ff;
+}
+
+/* Theme toggle button styles */
+.theme-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.theme-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #3a86ff;
+  font-weight: 700;
+}
+
 .App {
   text-align: center;
 }
